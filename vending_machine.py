@@ -39,3 +39,5 @@ class Machine():
     def buy(self, command):
         if self.get_current_sum() == 1 and command == 'BUY-B':
             self.response.append('B')
+        elif self.get_current_sum() == 1.5 and command == 'BUY-C':
+            self.response.append('C')

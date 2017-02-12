@@ -43,4 +43,3 @@ class Machine():
             self.response.append('C')
         elif self.get_current_sum() == 0.65 and command == 'BUY-A':
             self.response.append('A')
-

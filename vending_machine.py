@@ -42,6 +42,7 @@ class Machine():
     def buy(self, command):
         if self.get_current_sum() == 1 and command == 'BUY-B':
             self.response.append('B')
+            self.b_items -= 1
         elif self.get_current_sum() == 1.5 and command == 'BUY-C':
             self.response.append('C')
         elif self.get_current_sum() == 0.65 and command == 'BUY-A':
@@ -54,5 +55,5 @@ class Machine():
             self.b_items
         elif command == 'CHECK-A':
             self.a_items
-        elif command == 'CHECK-C':
+        else:
             self.c_items

@@ -78,10 +78,20 @@ class TestVendingMachine(unittest.TestCase):
         m.run('BUY-B')
         self.assertEqual(m.response, ['Not enough money'])
 
-    def test_items_available(self):
+    def test_item_b_available(self):
         m = Machine()
         m.run('CHECK-B')
         self.assertEqual(m.b_items, 5)
+
+    def test_item_a_available(self):
+        m = Machine()
+        m.run('CHECK-A')
+        self.assertEqual(m.a_items, 10)
+
+    def test_item_c_available(self):
+        m = Machine()
+        m.run('CHECK-C')
+        self.assertEqual(m.c_items, 15)
 
 
 if __name__ == '__main__':

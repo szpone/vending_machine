@@ -16,6 +16,8 @@ class Machine():
         self.response = []
         self.coins_inserted = []
         self.b_items = 5
+        self.a_items = 10
+        self.c_items = 15
 
     def run(self, *commands):
         for command in commands:
@@ -50,3 +52,7 @@ class Machine():
     def items_available(self, command):
         if command == 'CHECK-B':
             self.b_items
+        elif command == 'CHECK-A':
+            self.a_items
+        elif command == 'CHECK-C':
+            self.c_items

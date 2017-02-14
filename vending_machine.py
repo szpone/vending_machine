@@ -15,6 +15,7 @@ class Machine():
     def __init__(self):
         self.response = []
         self.coins_inserted = []
+        self.b_items = 5
 
     def run(self, *commands):
         for command in commands:
@@ -45,3 +46,7 @@ class Machine():
             self.response.append('A')
         else:
             self.response.append('Not enough money')
+
+    def items_available(self, command):
+        if command == 'CHECK-B':
+            self.b_items

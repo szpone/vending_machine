@@ -78,6 +78,11 @@ class TestVendingMachine(unittest.TestCase):
         m.run('BUY-B')
         self.assertEqual(m.response, ['Not enough money'])
 
+    def test_items_available(self):
+        m = Machine()
+        m.run('CHECK-B')
+        self.assertEqual(m.b_items, 5)
+
 
 if __name__ == '__main__':
     unittest.main()

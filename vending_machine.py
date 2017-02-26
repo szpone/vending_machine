@@ -1,4 +1,3 @@
-
 COINS = ['D', 'N', 'Q']
 
 
@@ -43,10 +42,15 @@ class Machine():
         if self.get_current_sum() == 1 and command == 'BUY-B':
             self.response.append('B')
             self.b_items -= 1
+            self.coins_inserted = []
         elif self.get_current_sum() == 1.5 and command == 'BUY-C':
             self.response.append('C')
+            self.c_items -= 1
+            self.coins_inserted = []
         elif self.get_current_sum() == 0.65 and command == 'BUY-A':
             self.response.append('A')
+            self.a_items -= 1
+            self.coins_inserted = []
         else:
             self.response.append('Not enough money')
 
